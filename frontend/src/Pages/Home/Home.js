@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,Helmet } from "react";
 import Header from "../../components/Header";
 import { useNavigate } from "react-router-dom";
 import { Button, Modal, Form, Container } from "react-bootstrap";
@@ -178,27 +178,7 @@ const Home = () => {
   const handleChartClick = (e) => {
     setView("chart");
   };
-  const ChatbotComponent = () => {
-    useEffect(() => {
-      const script = document.createElement('script');
-      script.src = 'https://www.chatbase.co/embed.min.js';
-      script.defer = true;
-      script.setAttribute('chatbotId', 'yJ7qEbvn1kasvqSixCkJK');
-      script.setAttribute('domain', 'www.chatbase.co');
-      
-      document.body.appendChild(script);
   
-      return () => {
-        document.body.removeChild(script);
-      };
-    }, []);
-  
-    return (
-      <div>
-        {/* Your React component content here */}
-      </div>
-    );
-  };
 
   return (
     <>
@@ -423,9 +403,6 @@ const Home = () => {
             )}
             <ToastContainer />
           </Container>
-          <>
-          <ChatbotComponent/>
-          </>
         </>
       )}
     </>

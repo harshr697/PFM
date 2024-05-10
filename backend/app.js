@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
 import transactionRoutes from "./Routers/Transactions.js";
+import GoalRoutes from "./Routers/Goals.js";
 import userRoutes from "./Routers/userRouter.js";
 import path from "path";
 
@@ -40,6 +41,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Router
+app.use("/goal",GoalRoutes)
 app.use("/api/v1", transactionRoutes);
 app.use("/api/auth", userRoutes);
 

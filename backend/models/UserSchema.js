@@ -32,13 +32,13 @@ const userSchema = new mongoose.Schema({
     transactions: {
         type: [],
     },
-
+    goals:{
+        type:[],
+    },
     createdAt: {
         type:Date,
         default: Date.now,
     },
-
-    
 
 });
 

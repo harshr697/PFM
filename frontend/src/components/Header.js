@@ -104,23 +104,15 @@ const Header = () => {
             bottom: 0,
           }}
         />
-        <Navbar className="navbarCSS" collapseOnSelect expand="lg" style={{color:"#ffcc00", position: 'relative', zIndex: "2 !important" }}>
-          <h2 href="/" className='headingClass' >Personal Finance Manager</h2>
-         <Navbar.Toggle
-            aria-controls="basic-navbar-nav"
-            style={{
-              backgroundColor: "transparent",
-              borderColor: "transparent",
-            }}
-          >
-          </Navbar.Toggle>
+        <Navbar className="navbarCSS" collapseOnSelect expand="lg" style={{color:"#ffcc00", position: 'relative', zIndex: "2 !important", textDecorationColor:"#ffcc00"}}>
+          <h2 className='headingClass' onClick={()=>{navigate("/")}} >Personal Finance Manager</h2>
           <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="mr-auto" >
             <Nav.Item className="ml-2">
-              <Button variant="string" onClick={() => navigate("/bankacc")}>Accounts</Button>
+              <Button variant='string' onClick={() => navigate("/bankacc")}>Accounts</Button>
             </Nav.Item>
             <Nav.Item className="ml-2">
-              <Button variant='string'>Goals</Button>
+              <Button variant='string' onClick={() => navigate("/goal")}>Goals</Button>
             </Nav.Item>
             <Nav.Item className="ml-2">
               <Button variant='string'>Bills</Button>

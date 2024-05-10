@@ -21,8 +21,10 @@
   background-color: transparent;
   justify-content: space-evenly;
 }
-.ml-2{
-  color: aliceblue;
+.ml-2{ 
+  text-decoration-color: aliceblue;
+  stop-color: aliceblue;
+  text-emphasis-color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 

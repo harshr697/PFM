@@ -1,12 +1,11 @@
 import mongoose from "mongoose";
 
 
-const transactionSchema = new mongoose.Schema({
-    Goal: {
+const goalSchema = new mongoose.Schema({
+    goal: {
         type: String,
         required: [true, "Goal is required"],
         trim: true,
-        
     },
     amount: {
         type: Number,
@@ -26,24 +25,20 @@ const transactionSchema = new mongoose.Schema({
         required: [true, "Transaction Type is required"],
         
     },
-
-    date: {
+    targetdate: {
         type: Date,
         required: [true, "Date is required"],
     },
-
     user:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
-
     createdAt: {
         type: Date,
         default: new Date(),
     }
-
 });
 
-const Transaction = mongoose.model('Transaction', transactionSchema);
+const Goal = mongoose.model('Goal', goalSchema);
 
-export default Transaction;
+export default Goal;
